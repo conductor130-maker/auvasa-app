@@ -1,30 +1,18 @@
-const CACHE_NAME = 'auvasa-v12';
+const CACHE_NAME = 'auvasa-v14';
 const ASSETS = [
-  './',
-  './index.html',
-  './styles.css',
-  './app.js',
-  './horarios.json',
-  './manifest.json',
-  './libro_horarios.pdf'
+  './', './index.html', './styles.css', './app.js', './horarios.json', './manifest.json', './libro_horarios.pdf'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(ASSETS).catch(err => {
-        console.warn('Algunos recursos no se pudieron cachear:', err);
-      });
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS).catch(err => console.warn('Error cache:', err)))
   );
   self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
+    caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))))
   );
   self.clients.claim();
 });
@@ -40,9 +28,7 @@ self.addEventListener('fetch', event => {
         }
         return res;
       }).catch(() => {
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
+        if (event.request.mode === 'navigate') return caches.match('./index.html');
       });
     })
   );
