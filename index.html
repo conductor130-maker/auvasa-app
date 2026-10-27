@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#005AA0">
+  <title>Horarios AUVASA</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="cabecera-top">
+    <h1>🚌 AUVASA Horarios</h1>
+    <div class="acciones">
+      <button id="btnBuscar" title="Buscar">🔍</button>
+      <button id="btnOscuro" title="Modo oscuro">🌓</button>
+      <button id="btnFavoritos" title="Mis turnos">⭐</button>
+    </div>
+  </div>
+  <div id="barraBusqueda" class="barra-busqueda oculto">
+    <input type="search" id="inputBusqueda" placeholder="Buscar línea, parada, barrio, código...">
+    <div id="resultadosBusqueda"></div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- PANTALLA 1: Tipos -->
+  <section id="pantalla-tipos" class="pantalla activa">
+    <div class="grid-tipos" id="grid-tipos"></div>
+  </section>
+
+  <!-- PANTALLA 2: Líneas -->
+  <section id="pantalla-lineas" class="pantalla">
+    <button class="btn-volver" onclick="irA('pantalla-tipos')">← Volver</button>
+    <h2 id="titulo-tipo"></h2>
+    <div class="grid-lineas" id="grid-lineas"></div>
+  </section>
+
+  <!-- PANTALLA 3A: Recorrido -->
+  <section id="pantalla-recorrido" class="pantalla">
+    <button class="btn-volver" onclick="volverAtras()">← Volver</button>
+    <h2 id="titulo-recorrido"></h2>
+    <div id="contenido-recorrido"></div>
+  </section>
+
+  <!-- PANTALLA 3B: Horarios (Grupos) -->
+  <section id="pantalla-horarios" class="pantalla">
+    <button class="btn-volver" onclick="volverAtras()">← Volver</button>
+    <h2 id="titulo-horarios"></h2>
+    <div id="filtros-dia"></div>
+    <div id="lista-horarios"></div>
+  </section>
+
+  <!-- PANTALLA 3C: Coches (Turnos) -->
+  <section id="pantalla-coches" class="pantalla">
+    <button class="btn-volver" onclick="volverAtras()">← Volver</button>
+    <h2 id="titulo-coches"></h2>
+    <div id="lista-coches"></div>
+  </section>
+
+  <!-- PANTALLA 4: Detalle del horario -->
+  <section id="pantalla-detalle" class="pantalla">
+    <button class="btn-volver" onclick="volverAtras()">← Volver</button>
+    <div id="detalle-horario"></div>
+  </section>
+
+  <!-- PANTALLA FAVORITOS -->
+  <section id="pantalla-favoritos" class="pantalla">
+    <button class="btn-volver" onclick="irA('pantalla-tipos')">← Volver</button>
+    <h2>⭐ Mis Turnos Favoritos</h2>
+    <div id="contenido-favoritos"></div>
+  </section>
+
+</main>
+
+<!-- Modal Favoritos -->
+<div id="modalFavorito" class="modal oculto">
+  <div class="modal-contenido">
+    <h3>Añadir a favoritos</h3>
+    <label>Nombre del grupo:</label>
+    <input type="text" id="nombreGrupo" placeholder="Ej: Diario invierno, Sábados...">
+    <div id="gruposExistentes"></div>
+    <div class="modal-botones">
+      <button class="btn-secundario" onclick="cerrarModal()">Cancelar</button>
+      <button class="btn-primario" onclick="guardarFavorito()">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
