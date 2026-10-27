@@ -1,4 +1,4 @@
-const CACHE_NAME = 'auvasa-v11';
+const CACHE_NAME = 'auvasa-v12';
 const ASSETS = [
   './',
   './index.html',

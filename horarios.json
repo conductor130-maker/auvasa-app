@@ -1,15 +1,372 @@
 {
   "lineas": [
-    {
-      "id": "1", "nombre": "Covaresa – Bº España", "tipo": "ordinaria", "paginaRecorridoPDF": 11,
+        {
+      "id": "1",
+      "nombre": "Covaresa – Bº España",
+      "tipo": "ordinaria",
+      "paginaRecorridoPDF": 11,
       "recorridos": [
-        {"sentido": "Ida", "paradas": ["Pza. Castilla y León 1", "Ctra. Rueda 131 Centro Deportivo", "Pº Zorrilla 203 esq. Vinos de Cigales", "Pº Zorrilla 187 esq. Vinos Vega Sicilia", "Pº Zorrilla 153 fte. Centro Comercial", "Pº Zorrilla 133 Bº La Rubia", "Pº Zorrilla 101 LAVA", "Pº Zorrilla 65 fte. Centro Comercial", "Pº Zorrilla 39 esq. Puente Colgante", "Pº Zorrilla 1 antiguo Hosp. Militar", "Pº Zorrilla fte. 10 Campo Grande", "Pº Isabel La Católica 1 esq. 20 de Febrero", "Pza. Poniente fte. Jorge Guillén", "Pza. Fuente Dorada", "C/ Bajada de La Libertad 10 fte. Teatro Calderón", "Avda. Ramón y Cajal 3 Hosp. Clínico", "C/ Gondomar 12 esq. Santa Clara", "C/ Card. Torquemada esq. R. Santa Teresa", "C/ Card. Torquemada esq. Tirso de Molina", "C/ Card. Torquemada 50 esq. Soto", "C/ Card. Torquemada 54 Centro Salud Rondilla", "C/ Card. Torquemada fte. Polidep. Rondilla", "C/ Valle de Arán 48", "C/ Valle de Arán 76 esq. Costa Brava", "C/ Costa Brava Centro Comercial"]},
-        {"sentido": "Vuelta", "paradas": ["C/ Costa Brava Centro Comercial", "C/ Costa Brava 1 esq. Costa Dorada", "C/ Valle de Arán fte. 40", "C/ Portillo Balboa fte. 60 esq. Amor de Dios", "C/ Moradas 31 esq. Nebrija", "C/ Moradas 21 esq. Card. Cisneros", "C/ Card. Torquemada fte. 16", "Pza. San Pablo 2 esq. San Quirce", "C/ Angustias 5 Teatro Calderón", "Pza. Universidad esq. López Gómez", "Pza. España Bola del Mundo", "Pza. Zorrilla 3 esq. Santiago", "Pº Zorrilla 52 esq. Pº Hospital Militar", "Pº Zorrilla 88 fte. Pza. de Toros", "Pº Zorrilla 130 Centro Comercial", "Pº Zorrilla 166 fte. LAVA", "Pº Zorrilla 198 Bº La Rubia", "Pº Zorrilla 238 Centro Comercial", "Pº Zorrilla 346 esq. Vinos Ribera de Duero", "Pº Zorrilla 364 esq. Vinos de Rueda", "Ctra. Rueda 204 fte. Centro Deportivo", "Pza. Castilla y León 4 esq. Miguel Delibes"]}
+        {
+          "sentido": "Ida: Covaresa → Bº España",
+          "paradas": [
+            "Pza. Castilla y León 1", "Ctra. Rueda 131 Centro Deportivo", "Pº Zorrilla 203 esq. Vinos de Cigales",
+            "Pº Zorrilla 187 esq. Vinos Vega Sicilia", "Pº Zorrilla 153 fte. Centro Comercial",
+            "Pº Zorrilla 133 Bº La Rubia", "Pº Zorrilla 101 LAVA", "Pº Zorrilla 65 fte. Centro Comercial",
+            "Pº Zorrilla 39 esq. Puente Colgante", "Pº Zorrilla 1 antiguo Hosp. Militar", "Pº Zorrilla fte. 10 Campo Grande",
+            "Pº Isabel La Católica 1 esq. 20 de Febrero", "Pza. Poniente fte. Jorge Guillén", "Pza. Fuente Dorada",
+            "C/ Bajada de La Libertad 10 fte. Teatro Calderón", "Avda. Ramón y Cajal 3 Hosp. Clínico",
+            "C/ Gondomar 12 esq. Santa Clara", "C/ Card. Torquemada esq. R. Santa Teresa",
+            "C/ Card. Torquemada esq. Tirso de Molina", "C/ Card. Torquemada 50 esq. Soto",
+            "C/ Card. Torquemada 54 Centro Salud Rondilla", "C/ Card. Torquemada fte. Polidep. Rondilla",
+            "C/ Valle de Arán 48", "C/ Valle de Arán 76 esq. Costa Brava", "C/ Costa Brava Centro Comercial"
+          ]
+        },
+        {
+          "sentido": "Vuelta: Bº España → Covaresa",
+          "paradas": [
+            "C/ Costa Brava Centro Comercial", "C/ Costa Brava 1 esq. Costa Dorada", "C/ Valle de Arán fte. 40",
+            "C/ Portillo Balboa fte. 60 esq. Amor de Dios", "C/ Moradas 31 esq. Nebrija", "C/ Moradas 21 esq. Card. Cisneros",
+            "C/ Card. Torquemada fte. 16", "Pza. San Pablo 2 esq. San Quirce", "C/ Angustias 5 Teatro Calderón",
+            "Pza. Universidad esq. López Gómez", "Pza. España Bola del Mundo", "Pza. Zorrilla 3 esq. Santiago",
+            "Pº Zorrilla 52 esq. Pº Hospital Militar", "Pº Zorrilla 88 fte. Pza. de Toros", "Pº Zorrilla 130 Centro Comercial",
+            "Pº Zorrilla 166 fte. LAVA", "Pº Zorrilla 198 Bº La Rubia", "Pº Zorrilla 238 Centro Comercial",
+            "Pº Zorrilla 346 esq. Vinos Ribera de Duero", "Pº Zorrilla 364 esq. Vinos de Rueda", "Ctra. Rueda 204 fte. Centro Deportivo",
+            "Pza. Castilla y León 4 esq. Miguel Delibes"
+          ]
+        }
       ],
       "letreros": ["1 1 COVARESA", "1 1 Bº ESPAÑA", "1 1 FTE. DORADA", "1 1 CLINICO", "1 1 PZA. PONIENTE"],
-      "notas": ["En la parada de 'Pza. Castilla y León 4 esq. Miguel Delibes', solo descenderán viajeros.", "El giro en la cabecera de Bº España se debe hacer en la glorieta."],
+      "notas": [
+        "En la parada de 'Pza. Castilla y León 4 esq. Miguel Delibes', solo descenderán viajeros...",
+        "El giro en la cabecera de Bº España se debe hacer en la glorieta situada en ese punto..."
+      ],
       "horarios": [
-        {"nombre": "12 coches A", "tipoDia": "Lunes a Viernes Laborables", "coches": 12, "paginaPDF": 13, "descanso": "20 min en cabecera", "cochesDetalle": [{"nombre": "Horario 1", "primeraSalida": "7:10", "retirada": "Se retira de COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "7:10"}, {"cabecera": "ESPAÑA", "hora": "7:59"}, {"cabecera": "COVAR.", "hora": "8:47"}, {"cabecera": "ESPAÑA", "hora": "9:36"}, {"cabecera": "COVAR.", "hora": "10:23"}, {"cabecera": "ESPAÑA", "hora": "11:30"}, {"cabecera": "COVAR.", "hora": "12:19"}, {"cabecera": "ESPAÑA", "hora": "13:24"}, {"cabecera": "COVAR.", "hora": "14:14"}, {"cabecera": "ESPAÑA", "hora": "15:06"}, {"cabecera": "COVAR.", "hora": "15:57"}, {"cabecera": "ESPAÑA", "hora": "17:00"}, {"cabecera": "COVAR.", "hora": "17:49"}, {"cabecera": "ESPAÑA", "hora": "18:59"}, {"cabecera": "COVAR.", "hora": "19:49"}, {"cabecera": "ESPAÑA", "hora": "20:40"}, {"cabecera": "COVAR.", "hora": "21:28"}, {"cabecera": "ESPAÑA", "hora": "22:15"}]}, {"nombre": "Horario 2", "primeraSalida": "7:18", "retirada": "Se retira de ESPAÑA", "salidas": [{"cabecera": "COVAR.", "hora": "7:18"}, {"cabecera": "ESPAÑA", "hora": "8:07"}, {"cabecera": "COVAR.", "hora": "8:55"}, {"cabecera": "ESPAÑA", "hora": "9:44"}, {"cabecera": "COVAR.", "hora": "10:31"}, {"cabecera": "ESPAÑA", "hora": "11:38"}, {"cabecera": "COVAR.", "hora": "12:28"}, {"cabecera": "ESPAÑA", "hora": "13:32"}, {"cabecera": "COVAR.", "hora": "14:22"}, {"cabecera": "ESPAÑA", "hora": "15:14"}, {"cabecera": "COVAR.", "hora": "16:05"}, {"cabecera": "ESPAÑA", "hora": "17:11"}, {"cabecera": "COVAR.", "hora": "18:00"}, {"cabecera": "ESPAÑA", "hora": "19:10"}, {"cabecera": "COVAR.", "hora": "19:58"}, {"cabecera": "ESPAÑA", "hora": "20:48"}, {"cabecera": "COVAR.", "hora": "21:38"}, {"cabecera": "ESPAÑA", "hora": "22:35"}]}, {"nombre": "Horario 3", "primeraSalida": "7:26", "retirada": "Se retira de COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "7:26"}, {"cabecera": "ESPAÑA", "hora": "8:15"}, {"cabecera": "COVAR.", "hora": "9:03"}, {"cabecera": "ESPAÑA", "hora": "9:54"}, {"cabecera": "COVAR.", "hora": "10:39"}, {"cabecera": "ESPAÑA", "hora": "11:47"}, {"cabecera": "COVAR.", "hora": "12:37"}, {"cabecera": "ESPAÑA", "hora": "13:40"}, {"cabecera": "COVAR.", "hora": "14:30"}, {"cabecera": "ESPAÑA", "hora": "15:22"}, {"cabecera": "COVAR.", "hora": "16:13"}, {"cabecera": "ESPAÑA", "hora": "17:20"}, {"cabecera": "COVAR.", "hora": "18:09"}, {"cabecera": "ESPAÑA", "hora": "19:17"}, {"cabecera": "COVAR.", "hora": "20:06"}, {"cabecera": "ESPAÑA", "hora": "20:56"}, {"cabecera": "COVAR.", "hora": "21:48"}]}, {"nombre": "Horario 4", "primeraSalida": "7:34", "retirada": "Se retira de COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "7:34"}, {"cabecera": "ESPAÑA", "hora": "8:23"}, {"cabecera": "COVAR.", "hora": "9:11"}, {"cabecera": "ESPAÑA", "hora": "10:04"}, {"cabecera": "COVAR.", "hora": "10:50"}, {"cabecera": "ESPAÑA", "hora": "11:58"}, {"cabecera": "COVAR.", "hora": "12:47"}, {"cabecera": "ESPAÑA", "hora": "13:48"}, {"cabecera": "COVAR.", "hora": "14:39"}, {"cabecera": "ESPAÑA", "hora": "15:30"}, {"cabecera": "COVAR.", "hora": "16:21"}, {"cabecera": "ESPAÑA", "hora": "17:28"}, {"cabecera": "COVAR.", "hora": "18:18"}, {"cabecera": "ESPAÑA", "hora": "19:24"}, {"cabecera": "COVAR.", "hora": "20:14"}, {"cabecera": "ESPAÑA", "hora": "21:04"}, {"cabecera": "COVAR.", "hora": "21:58"}]}, {"nombre": "Horario 5", "primeraSalida": "7:42", "retirada": "Se retira de ESPAÑA", "salidas": [{"cabecera": "COVAR.", "hora": "7:42"}, {"cabecera": "ESPAÑA", "hora": "8:31"}, {"cabecera": "COVAR.", "hora": "9:19"}, {"cabecera": "ESPAÑA", "hora": "10:14"}, {"cabecera": "COVAR.", "hora": "11:00"}, {"cabecera": "ESPAÑA", "hora": "12:09"}, {"cabecera": "COVAR.", "hora": "12:57"}, {"cabecera": "ESPAÑA", "hora": "13:57"}, {"cabecera": "COVAR.", "hora": "14:48"}, {"cabecera": "ESPAÑA", "hora": "15:38"}, {"cabecera": "COVAR.", "hora": "16:29"}, {"cabecera": "ESPAÑA", "hora": "17:36"}, {"cabecera": "COVAR.", "hora": "18:27"}, {"cabecera": "ESPAÑA", "hora": "19:31"}, {"cabecera": "COVAR.", "hora": "20:22"}, {"cabecera": "ESPAÑA", "hora": "21:12"}, {"cabecera": "COVAR.", "hora": "22:05"}, {"cabecera": "ESPAÑA", "hora": "22:35"}]}, {"nombre": "Horario 6", "primeraSalida": "7:50", "retirada": "Se retira de ESPAÑA", "salidas": [{"cabecera": "COVAR.", "hora": "7:50"}, {"cabecera": "ESPAÑA", "hora": "8:39"}, {"cabecera": "COVAR.", "hora": "9:27"}, {"cabecera": "ESPAÑA", "hora": "10:24"}, {"cabecera": "COVAR.", "hora": "11:10"}, {"cabecera": "ESPAÑA", "hora": "12:19"}, {"cabecera": "COVAR.", "hora": "13:07"}, {"cabecera": "ESPAÑA", "hora": "14:06"}, {"cabecera": "COVAR.", "hora": "14:57"}, {"cabecera": "ESPAÑA", "hora": "15:47"}, {"cabecera": "COVAR.", "hora": "16:37"}, {"cabecera": "ESPAÑA", "hora": "17:44"}, {"cabecera": "COVAR.", "hora": "18:36"}, {"cabecera": "ESPAÑA", "hora": "19:39"}, {"cabecera": "COVAR.", "hora": "20:30"}, {"cabecera": "ESPAÑA", "hora": "21:20"}, {"cabecera": "COVAR.", "hora": "22:35"}]}, {"nombre": "Horario 7", "primeraSalida": "7:20", "retirada": "Se retira de ESPAÑA", "salidas": [{"cabecera": "COVAR.", "hora": "7:20"}, {"cabecera": "ESPAÑA", "hora": "7:59"}, {"cabecera": "COVAR.", "hora": "8:48"}, {"cabecera": "ESPAÑA", "hora": "9:35"}, {"cabecera": "COVAR.", "hora": "10:34"}, {"cabecera": "ESPAÑA", "hora": "11:22"}, {"cabecera": "COVAR.", "hora": "12:29"}, {"cabecera": "ESPAÑA", "hora": "13:16"}, {"cabecera": "COVAR.", "hora": "14:15"}, {"cabecera": "ESPAÑA", "hora": "15:06"}, {"cabecera": "COVAR.", "hora": "16:06"}, {"cabecera": "ESPAÑA", "hora": "16:55"}, {"cabecera": "COVAR.", "hora": "17:53"}, {"cabecera": "ESPAÑA", "hora": "18:45"}, {"cabecera": "COVAR.", "hora": "19:47"}, {"cabecera": "ESPAÑA", "hora": "20:38"}, {"cabecera": "COVAR.", "hora": "21:28"}, {"cabecera": "ESPAÑA", "hora": "22:15"}]}, {"nombre": "Horario 8", "primeraSalida": "8:07", "retirada": "Se retira de COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "8:07"}, {"cabecera": "ESPAÑA", "hora": "8:56"}, {"cabecera": "COVAR.", "hora": "9:35"}, {"cabecera": "ESPAÑA", "hora": "10:34"}, {"cabecera": "COVAR.", "hora": "11:04"}, {"cabecera": "ESPAÑA", "hora": "11:51"}, {"cabecera": "COVAR.", "hora": "13:08"}, {"cabecera": "ESPAÑA", "hora": "13:56"}, {"cabecera": "COVAR.", "hora": "14:58"}, {"cabecera": "ESPAÑA", "hora": "15:49"}, {"cabecera": "COVAR.", "hora": "16:48"}, {"cabecera": "ESPAÑA", "hora": "17:40"}, {"cabecera": "COVAR.", "hora": "18:47"}, {"cabecera": "ESPAÑA", "hora": "19:42"}, {"cabecera": "COVAR.", "hora": "20:39"}, {"cabecera": "ESPAÑA", "hora": "21:30"}, {"cabecera": "COVAR.", "hora": "22:05"}]}, {"nombre": "Horario 9", "primeraSalida": "8:15", "retirada": "Se retira de COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "8:15"}, {"cabecera": "ESPAÑA", "hora": "9:04"}, {"cabecera": "COVAR.", "hora": "9:43"}, {"cabecera": "ESPAÑA", "hora": "10:34"}, {"cabecera": "COVAR.", "hora": "11:14"}, {"cabecera": "ESPAÑA", "hora": "12:01"}, {"cabecera": "COVAR.", "hora": "13:08"}, {"cabecera": "ESPAÑA", "hora": "13:56"}, {"cabecera": "COVAR.", "hora": "14:58"}, {"cabecera": "ESPAÑA", "hora": "15:49"}, {"cabecera": "COVAR.", "hora": "16:48"}, {"cabecera": "ESPAÑA", "hora": "17:40"}, {"cabecera": "COVAR.", "hora": "18:47"}, {"cabecera": "ESPAÑA", "hora": "19:42"}, {"cabecera": "COVAR.", "hora": "20:39"}, {"cabecera": "ESPAÑA", "hora": "21:30"}, {"cabecera": "COVAR.", "hora": "22:05"}]}, {"nombre": "Horario 10", "primeraSalida": "8:23", "retirada": "Se retira de COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "8:23"}, {"cabecera": "ESPAÑA", "hora": "9:12"}, {"cabecera": "COVAR.", "hora": "10:07"}, {"cabecera": "ESPAÑA", "hora": "10:54"}, {"cabecera": "COVAR.", "hora": "11:30"}, {"cabecera": "ESPAÑA", "hora": "12:39"}, {"cabecera": "COVAR.", "hora": "13:39"}, {"cabecera": "ESPAÑA", "hora": "14:24"}, {"cabecera": "COVAR.", "hora": "15:06"}, {"cabecera": "ESPAÑA", "hora": "15:56"}, {"cabecera": "COVAR.", "hora": "16:46"}, {"cabecera": "ESPAÑA", "hora": "17:53"}, {"cabecera": "COVAR.", "hora": "18:55"}, {"cabecera": "ESPAÑA", "hora": "19:56"}, {"cabecera": "COVAR.", "hora": "20:54"}, {"cabecera": "ESPAÑA", "hora": "21:44"}, {"cabecera": "COVAR.", "hora": "22:15"}]}, {"nombre": "Horario 11", "primeraSalida": "8:31", "retirada": "Se retira de ESPAÑA", "salidas": [{"cabecera": "COVAR.", "hora": "8:31"}, {"cabecera": "ESPAÑA", "hora": "9:20"}, {"cabecera": "COVAR.", "hora": "10:15"}, {"cabecera": "ESPAÑA", "hora": "11:07"}, {"cabecera": "COVAR.", "hora": "11:47"}, {"cabecera": "ESPAÑA", "hora": "12:51"}, {"cabecera": "COVAR.", "hora": "13:53"}, {"cabecera": "ESPAÑA", "hora": "14:40"}, {"cabecera": "COVAR.", "hora": "15:20"}, {"cabecera": "ESPAÑA", "hora": "16:04"}, {"cabecera": "COVAR.", "hora": "16:59"}, {"cabecera": "ESPAÑA", "hora": "17:40"}, {"cabecera": "COVAR.", "hora": "18:50"}, {"cabecera": "ESPAÑA", "hora": "19:42"}, {"cabecera": "COVAR.", "hora": "20:53"}, {"cabecera": "ESPAÑA", "hora": "21:44"}, {"cabecera": "COVAR.", "hora": "22:30"}]}, {"nombre": "Horario 12", "primeraSalida": "8:39", "retirada": "Se retira de ESPAÑA", "salidas": [{"cabecera": "COVAR.", "hora": "8:39"}, {"cabecera": "ESPAÑA", "hora": "9:28"}, {"cabecera": "COVAR.", "hora": "10:15"}, {"cabecera": "ESPAÑA", "hora": "11:07"}, {"cabecera": "COVAR.", "hora": "11:47"}, {"cabecera": "ESPAÑA", "hora": "12:51"}, {"cabecera": "COVAR.", "hora": "13:53"}, {"cabecera": "ESPAÑA", "hora": "14:40"}, {"cabecera": "COVAR.", "hora": "15:20"}, {"cabecera": "ESPAÑA", "hora": "16:04"}, {"cabecera": "COVAR.", "hora": "16:59"}, {"cabecera": "ESPAÑA", "hora": "17:40"}, {"cabecera": "COVAR.", "hora": "18:50"}, {"cabecera": "ESPAÑA", "hora": "19:42"}, {"cabecera": "COVAR.", "hora": "20:53"}, {"cabecera": "ESPAÑA", "hora": "21:44"}, {"cabecera": "COVAR.", "hora": "22:30"}]}]}
+        {
+          "nombre": "12 coches A",
+          "tipoDia": "Lunes a Viernes Laborables",
+          "coches": 12,
+          "paginaPDF": 13,
+          "descanso": "20 min en cabecera",
+          "cochesDetalle": [
+            {
+              "nombre": "Horario 1",
+              "primeraSalida": "7:10",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:10"}, {"cabecera": "ESPAÑA", "hora": "7:59"},
+                {"cabecera": "COVAR.", "hora": "8:47"}, {"cabecera": "ESPAÑA", "hora": "9:36"},
+                {"cabecera": "COVAR.", "hora": "10:23"}, {"cabecera": "ESPAÑA", "hora": "11:30"},
+                {"cabecera": "COVAR.", "hora": "12:19"}, {"cabecera": "ESPAÑA", "hora": "13:24"},
+                {"cabecera": "COVAR.", "hora": "14:14"}, {"cabecera": "ESPAÑA", "hora": "15:06"},
+                {"cabecera": "COVAR.", "hora": "15:57"}, {"cabecera": "ESPAÑA", "hora": "17:00"},
+                {"cabecera": "COVAR.", "hora": "17:49"}, {"cabecera": "ESPAÑA", "hora": "18:59"},
+                {"cabecera": "COVAR.", "hora": "19:49"}, {"cabecera": "ESPAÑA", "hora": "20:40"},
+                {"cabecera": "COVAR.", "hora": "21:28"}, {"cabecera": "ESPAÑA", "hora": "22:15"}
+              ]
+            },
+            {
+              "nombre": "Horario 2",
+              "primeraSalida": "7:18",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:18"}, {"cabecera": "ESPAÑA", "hora": "8:07"},
+                {"cabecera": "COVAR.", "hora": "8:55"}, {"cabecera": "ESPAÑA", "hora": "9:44"},
+                {"cabecera": "COVAR.", "hora": "10:31"}, {"cabecera": "ESPAÑA", "hora": "11:38"},
+                {"cabecera": "COVAR.", "hora": "12:28"}, {"cabecera": "ESPAÑA", "hora": "13:32"},
+                {"cabecera": "COVAR.", "hora": "14:22"}, {"cabecera": "ESPAÑA", "hora": "15:14"},
+                {"cabecera": "COVAR.", "hora": "16:05"}, {"cabecera": "ESPAÑA", "hora": "17:11"},
+                {"cabecera": "COVAR.", "hora": "18:00"}, {"cabecera": "ESPAÑA", "hora": "19:10"},
+                {"cabecera": "COVAR.", "hora": "19:58"}, {"cabecera": "ESPAÑA", "hora": "20:48"},
+                {"cabecera": "COVAR.", "hora": "21:38"}, {"cabecera": "ESPAÑA", "hora": "22:35"}
+              ]
+            },
+            {
+              "nombre": "Horario 3",
+              "primeraSalida": "7:26",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:26"}, {"cabecera": "ESPAÑA", "hora": "8:15"},
+                {"cabecera": "COVAR.", "hora": "9:03"}, {"cabecera": "ESPAÑA", "hora": "9:54"},
+                {"cabecera": "COVAR.", "hora": "10:39"}, {"cabecera": "ESPAÑA", "hora": "11:47"},
+                {"cabecera": "COVAR.", "hora": "12:37"}, {"cabecera": "ESPAÑA", "hora": "13:40"},
+                {"cabecera": "COVAR.", "hora": "14:30"}, {"cabecera": "ESPAÑA", "hora": "15:22"},
+                {"cabecera": "COVAR.", "hora": "16:13"}, {"cabecera": "ESPAÑA", "hora": "17:20"},
+                {"cabecera": "COVAR.", "hora": "18:09"}, {"cabecera": "ESPAÑA", "hora": "19:17"},
+                {"cabecera": "COVAR.", "hora": "20:06"}, {"cabecera": "ESPAÑA", "hora": "20:56"},
+                {"cabecera": "COVAR.", "hora": "21:48"}
+              ]
+            },
+            {
+              "nombre": "Horario 4",
+              "primeraSalida": "7:34",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:34"}, {"cabecera": "ESPAÑA", "hora": "8:23"},
+                {"cabecera": "COVAR.", "hora": "9:11"}, {"cabecera": "ESPAÑA", "hora": "10:04"},
+                {"cabecera": "COVAR.", "hora": "10:50"}, {"cabecera": "ESPAÑA", "hora": "11:58"},
+                {"cabecera": "COVAR.", "hora": "12:47"}, {"cabecera": "ESPAÑA", "hora": "13:48"},
+                {"cabecera": "COVAR.", "hora": "14:39"}, {"cabecera": "ESPAÑA", "hora": "15:30"},
+                {"cabecera": "COVAR.", "hora": "16:21"}, {"cabecera": "ESPAÑA", "hora": "17:28"},
+                {"cabecera": "COVAR.", "hora": "18:18"}, {"cabecera": "ESPAÑA", "hora": "19:24"},
+                {"cabecera": "COVAR.", "hora": "20:14"}, {"cabecera": "ESPAÑA", "hora": "21:04"},
+                {"cabecera": "COVAR.", "hora": "21:58"}
+              ]
+            },
+            {
+              "nombre": "Horario 5",
+              "primeraSalida": "7:42",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:42"}, {"cabecera": "ESPAÑA", "hora": "8:31"},
+                {"cabecera": "COVAR.", "hora": "9:19"}, {"cabecera": "ESPAÑA", "hora": "10:14"},
+                {"cabecera": "COVAR.", "hora": "11:00"}, {"cabecera": "ESPAÑA", "hora": "12:09"},
+                {"cabecera": "COVAR.", "hora": "12:57"}, {"cabecera": "ESPAÑA", "hora": "13:57"},
+                {"cabecera": "COVAR.", "hora": "14:48"}, {"cabecera": "ESPAÑA", "hora": "15:38"},
+                {"cabecera": "COVAR.", "hora": "16:29"}, {"cabecera": "ESPAÑA", "hora": "17:36"},
+                {"cabecera": "COVAR.", "hora": "18:27"}, {"cabecera": "ESPAÑA", "hora": "19:31"},
+                {"cabecera": "COVAR.", "hora": "20:22"}, {"cabecera": "ESPAÑA", "hora": "21:12"},
+                {"cabecera": "COVAR.", "hora": "22:05"}, {"cabecera": "ESPAÑA", "hora": "22:35"}
+              ]
+            },
+            {
+              "nombre": "Horario 6",
+              "primeraSalida": "7:50",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:50"}, {"cabecera": "ESPAÑA", "hora": "8:39"},
+                {"cabecera": "COVAR.", "hora": "9:27"}, {"cabecera": "ESPAÑA", "hora": "10:24"},
+                {"cabecera": "COVAR.", "hora": "11:10"}, {"cabecera": "ESPAÑA", "hora": "12:19"},
+                {"cabecera": "COVAR.", "hora": "13:07"}, {"cabecera": "ESPAÑA", "hora": "14:06"},
+                {"cabecera": "COVAR.", "hora": "14:57"}, {"cabecera": "ESPAÑA", "hora": "15:47"},
+                {"cabecera": "COVAR.", "hora": "16:37"}, {"cabecera": "ESPAÑA", "hora": "17:44"},
+                {"cabecera": "COVAR.", "hora": "18:36"}, {"cabecera": "ESPAÑA", "hora": "19:39"},
+                {"cabecera": "COVAR.", "hora": "20:30"}, {"cabecera": "ESPAÑA", "hora": "21:20"},
+                {"cabecera": "COVAR.", "hora": "22:35"}
+              ]
+            },
+            {
+              "nombre": "Horario 7",
+              "primeraSalida": "7:20",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:20"}, {"cabecera": "ESPAÑA", "hora": "7:59"},
+                {"cabecera": "COVAR.", "hora": "8:48"}, {"cabecera": "ESPAÑA", "hora": "9:35"},
+                {"cabecera": "COVAR.", "hora": "10:34"}, {"cabecera": "ESPAÑA", "hora": "11:22"},
+                {"cabecera": "COVAR.", "hora": "12:29"}, {"cabecera": "ESPAÑA", "hora": "13:16"},
+                {"cabecera": "COVAR.", "hora": "14:15"}, {"cabecera": "ESPAÑA", "hora": "15:06"},
+                {"cabecera": "COVAR.", "hora": "16:06"}, {"cabecera": "ESPAÑA", "hora": "16:55"},
+                {"cabecera": "COVAR.", "hora": "17:53"}, {"cabecera": "ESPAÑA", "hora": "18:45"},
+                {"cabecera": "COVAR.", "hora": "19:47"}, {"cabecera": "ESPAÑA", "hora": "20:38"},
+                {"cabecera": "COVAR.", "hora": "21:28"}, {"cabecera": "ESPAÑA", "hora": "22:15"}
+              ]
+            },
+            {
+              "nombre": "Horario 8",
+              "primeraSalida": "8:07",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "8:07"}, {"cabecera": "ESPAÑA", "hora": "8:56"},
+                {"cabecera": "COVAR.", "hora": "9:35"}, {"cabecera": "ESPAÑA", "hora": "10:34"},
+                {"cabecera": "COVAR.", "hora": "11:04"}, {"cabecera": "ESPAÑA", "hora": "11:51"},
+                {"cabecera": "COVAR.", "hora": "13:08"}, {"cabecera": "ESPAÑA", "hora": "13:56"},
+                {"cabecera": "COVAR.", "hora": "14:58"}, {"cabecera": "ESPAÑA", "hora": "15:49"},
+                {"cabecera": "COVAR.", "hora": "16:48"}, {"cabecera": "ESPAÑA", "hora": "17:40"},
+                {"cabecera": "COVAR.", "hora": "18:47"}, {"cabecera": "ESPAÑA", "hora": "19:42"},
+                {"cabecera": "COVAR.", "hora": "20:39"}, {"cabecera": "ESPAÑA", "hora": "21:30"},
+                {"cabecera": "COVAR.", "hora": "22:05"}
+              ]
+            },
+            {
+              "nombre": "Horario 9",
+              "primeraSalida": "8:15",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "8:15"}, {"cabecera": "ESPAÑA", "hora": "9:04"},
+                {"cabecera": "COVAR.", "hora": "9:43"}, {"cabecera": "ESPAÑA", "hora": "10:34"},
+                {"cabecera": "COVAR.", "hora": "11:14"}, {"cabecera": "ESPAÑA", "hora": "12:01"},
+                {"cabecera": "COVAR.", "hora": "13:08"}, {"cabecera": "ESPAÑA", "hora": "13:56"},
+                {"cabecera": "COVAR.", "hora": "14:58"}, {"cabecera": "ESPAÑA", "hora": "15:49"},
+                {"cabecera": "COVAR.", "hora": "16:48"}, {"cabecera": "ESPAÑA", "hora": "17:40"},
+                {"cabecera": "COVAR.", "hora": "18:47"}, {"cabecera": "ESPAÑA", "hora": "19:42"},
+                {"cabecera": "COVAR.", "hora": "20:39"}, {"cabecera": "ESPAÑA", "hora": "21:30"},
+                {"cabecera": "COVAR.", "hora": "22:05"}
+              ]
+            },
+            {
+              "nombre": "Horario 10",
+              "primeraSalida": "8:23",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "8:23"}, {"cabecera": "ESPAÑA", "hora": "9:12"},
+                {"cabecera": "COVAR.", "hora": "10:07"}, {"cabecera": "ESPAÑA", "hora": "10:54"},
+                {"cabecera": "COVAR.", "hora": "11:30"}, {"cabecera": "ESPAÑA", "hora": "12:39"},
+                {"cabecera": "COVAR.", "hora": "13:39"}, {"cabecera": "ESPAÑA", "hora": "14:24"},
+                {"cabecera": "COVAR.", "hora": "15:06"}, {"cabecera": "ESPAÑA", "hora": "15:56"},
+                {"cabecera": "COVAR.", "hora": "16:46"}, {"cabecera": "ESPAÑA", "hora": "17:53"},
+                {"cabecera": "COVAR.", "hora": "18:55"}, {"cabecera": "ESPAÑA", "hora": "19:56"},
+                {"cabecera": "COVAR.", "hora": "20:54"}, {"cabecera": "ESPAÑA", "hora": "21:44"},
+                {"cabecera": "COVAR.", "hora": "22:15"}
+              ]
+            },
+            {
+              "nombre": "Horario 11",
+              "primeraSalida": "8:31",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "8:31"}, {"cabecera": "ESPAÑA", "hora": "9:20"},
+                {"cabecera": "COVAR.", "hora": "10:15"}, {"cabecera": "ESPAÑA", "hora": "11:07"},
+                {"cabecera": "COVAR.", "hora": "11:47"}, {"cabecera": "ESPAÑA", "hora": "12:51"},
+                {"cabecera": "COVAR.", "hora": "13:53"}, {"cabecera": "ESPAÑA", "hora": "14:40"},
+                {"cabecera": "COVAR.", "hora": "15:20"}, {"cabecera": "ESPAÑA", "hora": "16:04"},
+                {"cabecera": "COVAR.", "hora": "16:59"}, {"cabecera": "ESPAÑA", "hora": "17:40"},
+                {"cabecera": "COVAR.", "hora": "18:50"}, {"cabecera": "ESPAÑA", "hora": "19:42"},
+                {"cabecera": "COVAR.", "hora": "20:53"}, {"cabecera": "ESPAÑA", "hora": "21:44"},
+                {"cabecera": "COVAR.", "hora": "22:30"}
+              ]
+            },
+            {
+              "nombre": "Horario 12",
+              "primeraSalida": "8:39",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "8:39"}, {"cabecera": "ESPAÑA", "hora": "9:28"},
+                {"cabecera": "COVAR.", "hora": "10:15"}, {"cabecera": "ESPAÑA", "hora": "11:07"},
+                {"cabecera": "COVAR.", "hora": "11:47"}, {"cabecera": "ESPAÑA", "hora": "12:51"},
+                {"cabecera": "COVAR.", "hora": "13:53"}, {"cabecera": "ESPAÑA", "hora": "14:40"},
+                {"cabecera": "COVAR.", "hora": "15:20"}, {"cabecera": "ESPAÑA", "hora": "16:04"},
+                {"cabecera": "COVAR.", "hora": "16:59"}, {"cabecera": "ESPAÑA", "hora": "17:40"},
+                {"cabecera": "COVAR.", "hora": "18:50"}, {"cabecera": "ESPAÑA", "hora": "19:42"},
+                {"cabecera": "COVAR.", "hora": "20:53"}, {"cabecera": "ESPAÑA", "hora": "21:44"},
+                {"cabecera": "COVAR.", "hora": "22:30"}
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "11 coches A",
+          "tipoDia": "Lunes a Viernes Laborables",
+          "coches": 11,
+          "paginaPDF": 14,
+          "descanso": "20 min en cabecera",
+          "cochesDetalle": [
+            {
+              "nombre": "Horario 1",
+              "primeraSalida": "7:10",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:10"}, {"cabecera": "ESPAÑA", "hora": "7:59"},
+                {"cabecera": "COVAR.", "hora": "8:47"}, {"cabecera": "ESPAÑA", "hora": "9:36"},
+                {"cabecera": "COVAR.", "hora": "10:23"}, {"cabecera": "ESPAÑA", "hora": "11:30"},
+                {"cabecera": "COVAR.", "hora": "12:19"}, {"cabecera": "ESPAÑA", "hora": "13:24"},
+                {"cabecera": "COVAR.", "hora": "14:14"}, {"cabecera": "ESPAÑA", "hora": "15:06"},
+                {"cabecera": "COVAR.", "hora": "15:57"}, {"cabecera": "ESPAÑA", "hora": "17:00"},
+                {"cabecera": "COVAR.", "hora": "17:49"}, {"cabecera": "ESPAÑA", "hora": "18:59"},
+                {"cabecera": "COVAR.", "hora": "19:49"}, {"cabecera": "ESPAÑA", "hora": "20:40"},
+                {"cabecera": "COVAR.", "hora": "21:28"}, {"cabecera": "ESPAÑA", "hora": "22:15"}
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "8 coches A",
+          "tipoDia": "Sábados",
+          "coches": 8,
+          "paginaPDF": 15,
+          "descanso": "20 min en cabecera",
+          "cochesDetalle": [
+            {
+              "nombre": "Horario 1",
+              "primeraSalida": "7:15",
+              "retirada": "Se retira de ESPAÑA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:15"}, {"cabecera": "ESPAÑA", "hora": "8:04"},
+                {"cabecera": "COVAR.", "hora": "8:52"}, {"cabecera": "ESPAÑA", "hora": "9:53"},
+                {"cabecera": "COVAR.", "hora": "10:37"}, {"cabecera": "ESPAÑA", "hora": "11:35"},
+                {"cabecera": "COVAR.", "hora": "12:21"}, {"cabecera": "ESPAÑA", "hora": "13:11"},
+                {"cabecera": "COVAR.", "hora": "14:00"}, {"cabecera": "ESPAÑA", "hora": "14:54"},
+                {"cabecera": "COVAR.", "hora": "15:44"}, {"cabecera": "ESPAÑA", "hora": "16:44"},
+                {"cabecera": "COVAR.", "hora": "17:30"}, {"cabecera": "ESPAÑA", "hora": "18:35"},
+                {"cabecera": "COVAR.", "hora": "19:23"}, {"cabecera": "ESPAÑA", "hora": "20:21"},
+                {"cabecera": "COVAR.", "hora": "21:10"}, {"cabecera": "ESPAÑA", "hora": "22:15"}
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "7 coches A",
+          "tipoDia": "Festivos",
+          "coches": 7,
+          "paginaPDF": 16,
+          "descanso": "20 min en cabecera",
+          "cochesDetalle": [
+            {
+              "nombre": "Horario 1",
+              "primeraSalida": "7:15",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:15"}, {"cabecera": "ESPAÑA", "hora": "7:30"},
+                {"cabecera": "COVAR.", "hora": "8:10"}, {"cabecera": "ESPAÑA", "hora": "9:05"},
+                {"cabecera": "COVAR.", "hora": "9:59"}, {"cabecera": "ESPAÑA", "hora": "10:50"},
+                {"cabecera": "COVAR.", "hora": "11:52"}, {"cabecera": "ESPAÑA", "hora": "12:37"},
+                {"cabecera": "COVAR.", "hora": "13:33"}, {"cabecera": "ESPAÑA", "hora": "14:20"},
+                {"cabecera": "COVAR.", "hora": "15:12"}, {"cabecera": "ESPAÑA", "hora": "16:14"},
+                {"cabecera": "COVAR.", "hora": "16:58"}, {"cabecera": "ESPAÑA", "hora": "17:44"},
+                {"cabecera": "COVAR.", "hora": "18:48"}, {"cabecera": "ESPAÑA", "hora": "19:33"},
+                {"cabecera": "COVAR.", "hora": "20:27"}, {"cabecera": "ESPAÑA", "hora": "21:09"}
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "9 coches A",
+          "tipoDia": "Julio: Lunes a Viernes Laborables",
+          "coches": 9,
+          "paginaPDF": 19,
+          "descanso": "20 min en cabecera",
+          "cochesDetalle": [
+            {
+              "nombre": "Horario 1",
+              "primeraSalida": "7:20",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:20"}, {"cabecera": "ESPAÑA", "hora": "8:06"},
+                {"cabecera": "COVAR.", "hora": "8:55"}, {"cabecera": "ESPAÑA", "hora": "10:10"},
+                {"cabecera": "COVAR.", "hora": "10:51"}, {"cabecera": "ESPAÑA", "hora": "11:41"},
+                {"cabecera": "COVAR.", "hora": "12:46"}, {"cabecera": "ESPAÑA", "hora": "13:37"},
+                {"cabecera": "COVAR.", "hora": "14:25"}, {"cabecera": "ESPAÑA", "hora": "15:16"},
+                {"cabecera": "COVAR.", "hora": "16:04"}, {"cabecera": "ESPAÑA", "hora": "17:07"},
+                {"cabecera": "COVAR.", "hora": "17:53"}, {"cabecera": "ESPAÑA", "hora": "19:03"},
+                {"cabecera": "COVAR.", "hora": "19:45"}, {"cabecera": "ESPAÑA", "hora": "20:38"},
+                {"cabecera": "COVAR.", "hora": "21:28"}, {"cabecera": "ESPAÑA", "hora": "22:15"}
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "4 coches A",
+          "tipoDia": "Agosto: Lunes a Viernes Laborables",
+          "coches": 4,
+          "paginaPDF": 20,
+          "descanso": "20 min en cabecera",
+          "cochesDetalle": [
+            {
+              "nombre": "Horario 1",
+              "primeraSalida": "7:10",
+              "retirada": "Se retira de COVARESA",
+              "salidas": [
+                {"cabecera": "COVAR.", "hora": "7:10"}, {"cabecera": "ESPAÑA", "hora": "8:06"},
+                {"cabecera": "COVAR.", "hora": "8:52"}, {"cabecera": "ESPAÑA", "hora": "9:42"},
+                {"cabecera": "COVAR.", "hora": "10:46"}, {"cabecera": "ESPAÑA", "hora": "11:36"},
+                {"cabecera": "COVAR.", "hora": "12:41"}, {"cabecera": "ESPAÑA", "hora": "13:29"},
+                {"cabecera": "COVAR.", "hora": "14:18"}, {"cabecera": "ESPAÑA", "hora": "15:06"},
+                {"cabecera": "COVAR.", "hora": "15:55"}, {"cabecera": "ESPAÑA", "hora": "16:42"},
+                {"cabecera": "COVAR.", "hora": "17:47"}, {"cabecera": "ESPAÑA", "hora": "18:37"},
+                {"cabecera": "COVAR.", "hora": "19:37"}, {"cabecera": "ESPAÑA", "hora": "20:25"},
+                {"cabecera": "COVAR.", "hora": "21:15"}, {"cabecera": "ESPAÑA", "hora": "22:00"}
+              ]
+            }
+          ]
+        }
       ]
     },
     {
