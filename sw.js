@@ -1,4 +1,4 @@
-const CACHE_NAME = 'auvasa-v14';
+const CACHE_NAME = 'auvasa-v15';
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './horarios.json', './manifest.json', './libro_horarios.pdf'
 ];
