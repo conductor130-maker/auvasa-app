@@ -1,4 +1,6 @@
-    {
+{
+  "lineas": [
+     {
       "id": "1",
       "nombre": "Covaresa – Bº España",
       "tipo": "ordinaria",
@@ -2516,4 +2518,6 @@
       ]
     }
   ]
+}
+]
 }
