@@ -1,4 +1,4 @@
-const CACHE_NAME = 'auvasa-v504'; // Versión nueva para forzar la actualización
+const CACHE_NAME = 'auvasa-v506'; // Versión nueva para forzar la actualización
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './horarios.json', './manifest.json', './libro_horarios.pdf'
 ];
