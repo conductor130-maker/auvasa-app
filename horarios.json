@@ -70,7 +70,7 @@
         {"nombre": "4 coches A", "tipoDia": "Agosto: Lunes a Viernes Laborables", "coches": 4, "paginaPDF": 20, "descanso": "20 min", "cochesDetalle": [
           {"nombre": "Horario 1", "primeraSalida": "7:10", "retirada": "Retira COVARESA", "salidas": [{"cabecera": "COVAR.", "hora": "7:10"}, {"cabecera": "ESPAÑA", "hora": "8:06"}, {"cabecera": "COVAR.", "hora": "8:52"}, {"cabecera": "ESPAÑA", "hora": "9:42"}, {"cabecera": "COVAR.", "hora": "10:46"}, {"cabecera": "ESPAÑA", "hora": "11:36"}, {"cabecera": "COVAR.", "hora": "12:41"}, {"cabecera": "ESPAÑA", "hora": "13:29"}, {"cabecera": "COVAR.", "hora": "14:18"}, {"cabecera": "ESPAÑA", "hora": "15:06"}, {"cabecera": "COVAR.", "hora": "15:55"}, {"cabecera": "ESPAÑA", "hora": "16:42"}, {"cabecera": "COVAR.", "hora": "17:47"}, {"cabecera": "ESPAÑA", "hora": "18:37"}, {"cabecera": "COVAR.", "hora": "19:37"}, {"cabecera": "ESPAÑA", "hora": "20:25"}, {"cabecera": "COVAR.", "hora": "21:15"}, {"cabecera": "ESPAÑA", "hora": "22:00"}]}
         ]},
-    {
+      {
       "id": "2",
       "nombre": "El Peral – San Pedro Regalado",
       "tipo": "ordinaria",
