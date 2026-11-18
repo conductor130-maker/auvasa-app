@@ -1,0 +1,67 @@
+{
+  "_plantilla_para_copiar_dentro_de_lineas": {
+    "id": "SE1",
+    "nombre": "Nombre del servicio especial",
+    "tipo": "especial",
+    "paginaRecorridoPDF": null,
+    "recorridos": [
+      {
+        "sentido": "Ida: Origen → Destino",
+        "paradas": [
+          "Parada 1",
+          "Parada 2",
+          "Parada 3"
+        ]
+      },
+      {
+        "sentido": "Vuelta: Destino → Origen",
+        "paradas": [
+          "Parada 3",
+          "Parada 2",
+          "Parada 1"
+        ]
+      }
+    ],
+    "letreros": [
+      "SE1 DESTINO"
+    ],
+    "notas": [
+      "Aquí van las notas de la línea."
+    ],
+    "horarios": [
+      {
+        "nombre": "1 coche A",
+        "tipoDia": "Día o días en que se hace",
+        "coches": 1,
+        "paginaPDF": null,
+        "descanso": "—",
+        "notas": [
+          "Nota que sale en la pantalla del turno."
+        ],
+        "cochesDetalle": [
+          {
+            "nombre": "Horario 1",
+            "primeraSalida": "7:30",
+            "retirada": "Se retira de DESTINO",
+            "salidas": [
+              {
+                "cabecera": "ORIGEN",
+                "hora": "7:30"
+              },
+              {
+                "cabecera": "DESTINO",
+                "hora": "8:10"
+              },
+              {
+                "cabecera": "ORIGEN",
+                "hora": "8:30",
+                "nota": "Nota opcional de la hora"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lineas": []
+}
