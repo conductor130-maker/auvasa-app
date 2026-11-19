@@ -7,52 +7,41 @@ let listaGruposFiltrada = [];
 let favoritoPendiente = null;
 
 // ---------- CARGA DE DATOS MÚLTIPLE ----------
-// Reads one data file; tries again if the connection fails, and says exactly what is wrong if the file is broken
-async function cargarArchivo(archivo) {
-  let ultimo = '';
-  for (let intento = 0; intento < 3; intento++) {
-    try {
-      const res = await fetch('./' + archivo + '?v=4', { cache: 'no-cache' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const texto = await res.text();
-      let json;
-      try { json = JSON.parse(texto); }
-      catch (e) {
-        const p = /position (\d+)/.exec(e.message), linea = p ? texto.slice(0, +p[1]).split('\n').length : null;
-        const err = new Error('JSON inválido' + (linea ? ' (cerca de la línea ' + linea + ')' : '') + ': ' + e.message); err.fatal = true; throw err;
-      }
-      if (!json || !Array.isArray(json.lineas)) { const err = new Error('falta la lista "lineas"'); err.fatal = true; throw err; }
-      return { lineas: json.lineas };
-    } catch (e) {
-      ultimo = e.message; if (e.fatal) break;
-      await new Promise(r => setTimeout(r, 1200));
-    }
-  }
-  return { error: ultimo };
-}
-
 async function cargarDatos() {
   const grid = document.getElementById('grid-tipos');
   grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:20px;">Cargando horarios...</p>';
+  
   const archivos = [
-    'horarios_ordinarias.json', 'horarios_madrugada.json', 'horarios_lanzaderas.json', 'horarios_buho.json',
-    'horarios_futbol.json', 'horarios_personal.json', 'horarios_especiales.json', 'horarios_manual.json'
+    'horarios_ordinarias.json',
+    'horarios_madrugada.json',
+    'horarios_lanzaderas.json',
+    'horarios_buho.json',
+    'horarios_futbol.json',
+    'horarios_personal.json',
+    'horarios_manual.json'
   ];
-  const opcionales = ['horarios_especiales.json', 'horarios_manual.json'];
-  const fallos = []; let todasLasLineas = [];
-  for (const archivo of archivos) {
-    const r = await cargarArchivo(archivo);
-    if (r.lineas) todasLasLineas = todasLasLineas.concat(r.lineas);
-    else if (!(opcionales.includes(archivo) && /HTTP 404/.test(r.error))) fallos.push(archivo + ': ' + r.error);
+
+  try {
+    let todasLasLineas = [];
+    for (const archivo of archivos) {
+      try {
+        const res = await fetch('./' + archivo + '?v=4'); // El ?v=4 evita problemas de caché
+        if (res.ok) {
+          const texto = await res.text();
+          const json = JSON.parse(texto);
+          if (json.lineas && Array.isArray(json.lineas)) {
+            todasLasLineas = todasLasLineas.concat(json.lineas);
+          }
+        }
+      } catch (e) { console.warn('Error en ' + archivo + ': ' + e.message); }
+    }
+
+    DATOS.lineas = todasLasLineas;
+    if (!DATOS.lineas || DATOS.lineas.length === 0) throw new Error('No se pudo cargar ninguna línea.');
+    renderTipos();
+  } catch (e) {
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:20px;background:#fff;color:#E30613;border-radius:10px;"><h3>Error cargando horarios</h3><p>' + e.message + '</p></div>';
   }
-  const av = document.getElementById('aviso-datos');
-  if (av) {
-    if (fallos.length) { av.innerHTML = '<b>No se han podido cargar algunos horarios</b><br>' + fallos.map(escHtml).join('<br>') + '<br><button onclick="cargarDatos()">Reintentar</button>'; av.classList.remove('oculto'); }
-    else av.classList.add('oculto');
-  }
-  DATOS.lineas = todasLasLineas;
-  if (!DATOS.lineas.length) { grid.innerHTML = '<div style="grid-column:1/-1;padding:20px;background:#fff;color:#E30613;border-radius:10px;"><h3>Error cargando horarios</h3><p>No se pudo cargar ninguna línea.</p></div>'; return; }
-  renderTipos();
 }
 
 // ---------- CONFIGURACIÓN DE LOS BOTONES ----------
@@ -63,13 +52,12 @@ const TIPOS = [
   { id: 'buho', emoji: '🦉', nombre: 'Líneas Búho' },
   { id: 'futbol', emoji: '⚽', nombre: 'Fútbol' },
   { id: 'lanzadera', emoji: '🎓', nombre: 'Lanzaderas' },
-  { id: 'personal', emoji: '🚐', nombre: 'Personal' },
-  { id: 'especial', emoji: '🎫', nombre: 'Servicios Especiales' }
+  { id: 'personal', emoji: '🚐', nombre: 'Personal' }
 ];
 
 function renderTipos() {
   const grid = document.getElementById('grid-tipos');
-  grid.innerHTML = TIPOS.filter(t => t.id === 'especial' || DATOS.lineas.some(l => l && l.tipo === t.id)).map(t =>
+  grid.innerHTML = TIPOS.filter(t => DATOS.lineas.some(l => l && l.tipo === t.id)).map(t =>
     '<button class="boton-tipo tipo-' + t.id + '" onclick="mostrarLineas(\'' + t.id + '\')">' +
       '<span class="emoji">' + t.emoji + '</span><span>' + t.nombre + '</span>' +
     '</button>'
@@ -87,8 +75,12 @@ function irA(id, pushHistory = true) {
   if (id === 'pantalla-archivos' && window.archInit) window.archInit();
   if (window.navActivo) window.navActivo(id);
   
-  const btnAtras = document.getElementById('btn-atras');
-  if (btnAtras) btnAtras.classList.toggle('oculto', id === 'pantalla-tipos');
+  const btnFlotante = document.getElementById('btn-volver-flotante');
+  if (id === 'pantalla-tipos') {
+    btnFlotante.classList.add('oculto');
+  } else {
+    btnFlotante.classList.remove('oculto');
+  }
 
   if (pushHistory) {
     history.pushState({ pantalla: id }, '', '#' + id);
@@ -122,9 +114,7 @@ function mostrarLineas(tipoId) {
   const grid = document.getElementById('grid-lineas');
   
   if (lineas.length === 0) {
-    grid.innerHTML = tipoId === 'especial'
-      ? '<p style="text-align:center;padding:30px 20px;line-height:1.6;">Aún no hay servicios especiales.<br><small>Añádelos en <b>horarios_especiales.json</b> con <code>"tipo": "especial"</code> (el archivo trae una plantilla).</small></p>'
-      : '<p style="text-align:center;padding:40px;">No hay líneas disponibles.</p>';
+    grid.innerHTML = '<p style="text-align:center;padding:40px;">No hay líneas disponibles.</p>';
   } else {
     grid.innerHTML = lineas.map(l =>
       '<div class="tarjeta-linea">' +

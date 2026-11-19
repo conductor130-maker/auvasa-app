@@ -105,56 +105,23 @@ body.dark .lista-letreros li { color: #6BB6E8; }
 .lista-notas li:last-child { border-bottom: none; }
 .btn-pdf { display: inline-block; margin-top: 12px; background: var(--rojo); color: #fff; padding: 10px 18px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.92rem; }
 
-/* ===== PANTALLA 3B: HORARIOS ===== */
-#filtros-dia { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 14px; -webkit-overflow-scrolling: touch; }
-#filtros-dia::-webkit-scrollbar { display: none; }
-.chip-dia { background: var(--tarjeta); border: 2px solid var(--borde); color: var(--texto); padding: 10px 16px; border-radius: 20px; font-size: 0.88rem; font-weight: 600; white-space: nowrap; cursor: pointer; font-family: inherit; }
-.chip-dia.activo { background: var(--azul); border-color: var(--azul); color: #fff; }
-.tarjeta-horario { background: var(--tarjeta); border-radius: var(--radio); padding: 16px; margin-bottom: 10px; box-shadow: var(--sombra); cursor: pointer; border-left: 5px solid var(--verde); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-.tarjeta-horario:active { background: var(--fondo); }
-.tarjeta-horario .info h4 { font-size: 1.05rem; color: var(--texto); margin-bottom: 4px; }
-.tarjeta-horario .info p { font-size: 0.85rem; color: var(--texto-secundario); }
-.tarjeta-horario .hora { font-size: 1.5rem; font-weight: 700; color: var(--verde); white-space: nowrap; }
-body.dark .tarjeta-horario .hora { color: #4CD964; }
+/* ===== PANTALLA 3B: GRUPOS (12 coches A, 8 coches A...) ===== */
+#lista-horarios { display: flex; flex-direction: column; gap: 12px; }
+.boton-grupo { background: var(--tarjeta); border: 2px solid var(--azul); border-radius: 14px; padding: 20px; text-align: left; cursor: pointer; box-shadow: var(--sombra); transition: transform 0.1s; font-family: inherit; }
+.boton-grupo:active { transform: scale(0.98); }
+.boton-grupo .grupo-titulo { font-size: 1.3rem; font-weight: 700; color: var(--azul); }
+.boton-grupo .grupo-sub { font-size: 0.9rem; color: var(--texto-secundario); margin-top: 4px; }
+.boton-grupo .grupo-accion { font-size: 0.85rem; font-weight: 700; color: var(--verde); margin-top: 10px; text-transform: uppercase; }
+body.dark .boton-grupo { border-color: #6BB6E8; }
+body.dark .boton-grupo .grupo-titulo { color: #6BB6E8; }
 
-/* ===== PANTALLA 3C: COCHES (Lista vertical) ===== */
-#lista-coches {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.btn-coche {
-  background: var(--tarjeta);
-  border: 2px solid var(--verde);
-  border-radius: 12px;
-  padding: 16px 18px;
-  text-align: left;
-  font-family: inherit;
-  cursor: pointer;
-  box-shadow: var(--sombra);
-  color: var(--texto);
-  transition: transform 0.1s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
+/* ===== PANTALLA 3C: COCHES (Horario 1, Horario 2...) ===== */
+#lista-coches { display: flex; flex-direction: column; gap: 10px; }
+.btn-coche { background: var(--tarjeta); border: 2px solid var(--verde); border-radius: 12px; padding: 16px 18px; text-align: left; font-family: inherit; cursor: pointer; box-shadow: var(--sombra); color: var(--texto); transition: transform 0.1s; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .btn-coche:active { transform: scale(0.98); }
-
-/* Alternar colores para que se lean bien */
-.btn-coche:nth-of-type(odd) {
-  background: var(--tarjeta);
-  border-left-color: var(--verde);
-}
-.btn-coche:nth-of-type(even) {
-  background: #E8F5EE;
-  border-left-color: var(--azul);
-}
-body.dark .btn-coche:nth-of-type(even) {
-  background: #1B2A22;
-  border-left-color: #6BB6E8;
-}
-
+.btn-coche:nth-of-type(odd) { background: var(--tarjeta); border-left-color: var(--verde); }
+.btn-coche:nth-of-type(even) { background: #E8F5EE; border-left-color: var(--azul); }
+body.dark .btn-coche:nth-of-type(even) { background: #1B2A22; border-left-color: #6BB6E8; }
 .btn-coche .info-coche { flex: 1; text-align: left; }
 .btn-coche .titulo-coche { font-size: 1rem; font-weight: 700; color: var(--verde); display: block; }
 body.dark .btn-coche .titulo-coche { color: #4CD964; }
@@ -173,50 +140,14 @@ body.dark .btn-coche .titulo-coche { color: #4CD964; }
 .nav-horarios button { flex: 1; padding: 14px; border-radius: 10px; border: none; font-family: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer; background: var(--tarjeta); color: var(--texto); border: 2px solid var(--azul); }
 .nav-horarios button:disabled { opacity: 0.4; cursor: not-allowed; }
 
-/* ===== TABLA ESTILO PDF (Dos columnas) ===== */
-.tabla-pdf {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--tarjeta);
-  border: 2px solid #333;
-  font-family: 'DM Sans', sans-serif;
-  margin-bottom: 16px;
-  box-shadow: var(--sombra);
-}
+/* ===== TABLA PDF ===== */
+.tabla-pdf { width: 100%; border-collapse: collapse; background: var(--tarjeta); border: 2px solid #333; font-family: 'DM Sans', sans-serif; margin-bottom: 16px; box-shadow: var(--sombra); }
 body.dark .tabla-pdf { border-color: #555; }
-
-.tabla-pdf th {
-  background: #f0f0f0;
-  color: #000;
-  font-weight: 700;
-  padding: 8px 4px;
-  border: 1px solid #333;
-  text-align: center;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-}
+.tabla-pdf th { background: #f0f0f0; color: #000; font-weight: 700; padding: 8px 4px; border: 1px solid #333; text-align: center; font-size: 0.9rem; text-transform: uppercase; }
 body.dark .tabla-pdf th { background: #333; color: #fff; border-color: #555; }
-
-.tabla-pdf td {
-  padding: 8px 4px;
-  border: 1px dashed #999;
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--texto);
-}
-.tabla-pdf td.hora-descanso {
-  font-weight: 700;
-  text-decoration: underline;
-}
-.tabla-pdf .footer-retirada {
-  border-top: 2px solid #333;
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  background: #f0f0f0;
-  color: #000;
-}
+.tabla-pdf td { padding: 8px 4px; border: 1px dashed #999; text-align: center; font-size: 1.1rem; color: var(--texto); }
+.tabla-pdf td.hora-descanso { font-weight: 700; text-decoration: underline; }
+.tabla-pdf .footer-retirada { border-top: 2px solid #333; padding: 10px; text-align: center; font-weight: 700; font-size: 0.9rem; background: #f0f0f0; color: #000; }
 body.dark .tabla-pdf .footer-retirada { background: #333; color: #fff; border-color: #555; }
 
 .acciones-detalle { display: flex; gap: 10px; margin-top: 16px; }
@@ -251,3 +182,59 @@ body.dark .grupo-favoritos h3 { color: #6BB6E8; }
   .grid-tipos { grid-template-columns: repeat(4, 1fr); }
   .grid-lineas { grid-template-columns: repeat(2, 1fr); }
 }
+/* ===== BOTÓN FLOTANTE ===== */
+.btn-flotante {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--azul);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+.btn-flotante:active {
+  transform: scale(0.95);
+}
+
+/* Ocultar el botón de volver antiguo de cada pantalla para no duplicar */
+.btn-volver {
+  display: none !important;
+}
+
+/* Botones del Manual */
+.btn-manual {
+  background: var(--tarjeta);
+  border: 2px solid var(--azul);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+.btn-manual:active { background: var(--fondo); }
+
+/* ===== FAVORITOS: accesos directos ===== */
+.fila-grupo { display: flex; gap: 8px; align-items: stretch; }
+.fila-grupo .boton-grupo { flex: 1; }
+.estrella-grupo { flex: 0 0 56px; border: 2px solid var(--amarillo); background: var(--tarjeta); border-radius: 14px; font-size: 1.5rem; cursor: pointer; }
+.estrella-grupo:active { background: var(--amarillo); }
+.fav-info { margin-bottom: 12px; font-weight: 700; color: var(--azul); }
+body.dark .fav-info { color: #6BB6E8; }
+.fav-cab { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+.fav-cab h3 { margin: 0 !important; }
+.fav-borrar { background: transparent; border: 1px solid var(--borde); border-radius: 8px; color: var(--rojo); padding: 6px 10px; font-size: 0.8rem; cursor: pointer; font-family: inherit; }
+.favorito-item { gap: 8px; }
+.favorito-item .fav-ir { flex: 1; text-align: left; color: var(--texto); font-family: inherit; font-size: 0.95rem; padding: 6px 0; }
+.fav-ir b { display: block; }
+.fav-ir small { color: var(--texto-secundario); }
