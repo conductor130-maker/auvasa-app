@@ -38,7 +38,7 @@
     <div class="hero-fecha" id="hero-fecha"></div>
     <div class="acceso-rapido">
       <button class="aq aq-hoy" onclick="irA('pantalla-hoy')"><span class="aq-ico">🕘</span><b>Horarios de hoy</b><small>El horario de cada línea</small></button>
-      <button class="aq aq-directo" onclick="irA('pantalla-buses')"><span class="aq-ico">🚍</span><b>Buses en directo</b><small>Mapa y lineales</small></button>
+      <button class="aq aq-directo" onclick="irA('pantalla-buses')"><span class="aq-ico">📡🚍🛰️</span><b>Buses en directo</b><small>Mapa y lineales</small></button>
       <button class="aq aq-paradas" id="btn-misparadas" onclick="togglePanelParadas()"><i class="aq-chev">▾</i><span class="aq-ico">⭐</span><b>Mis paradas</b><small id="mp-count"></small></button>
     </div>
     <div id="panel-misparadas" class="panel-paradas oculto"></div>
@@ -121,7 +121,7 @@
 
   <section id="pantalla-buses" class="pantalla">
     <div class="gx bx">
-      <h2>🚍 Buses en directo</h2>
+      <h2>📡🚍🛰️ Buses en directo</h2>
       <div id="bx-app"></div>
     </div>
   </section>
@@ -157,7 +157,7 @@
 
 <nav id="navbar">
   <button data-go="pantalla-tipos" class="activo"><span>🏠</span>Inicio</button>
-  <button data-go="pantalla-buses"><span>🚍</span>En directo</button>
+  <button data-go="pantalla-buses"><span>📡🚍🛰️</span>En directo</button>
   <button data-go="pantalla-hoy"><span>🕘</span>Hoy</button>
   <button data-go="mis-paradas"><span>⭐</span>Mis paradas</button>
   <button data-go="pantalla-favoritos"><span>📌</span>Turnos</button>
