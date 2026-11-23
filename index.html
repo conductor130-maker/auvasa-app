@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#1FF2E0">
+  <meta name="theme-color" content="#005AA0">
   <title>Horarios AUVASA</title>
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 
 <header class="cabecera">
   <div class="cabecera-top">
-    <h1><img src="icon-192.png" class="logo" alt=""><span>AUVASA</span></h1>
+    <button id="btn-atras" class="btn-atras oculto" onclick="volverAtras()" aria-label="Atrás">‹</button><h1><img src="icon-192.png" class="logo" alt=""><span>AUVASA</span></h1>
     <div class="acciones">
       <button id="btnBuscar" title="Buscar">🔍</button>
       <button id="btnOscuro" title="Modo oscuro">🌓</button>
@@ -35,10 +35,11 @@
 
 <main id="app">
   <section id="pantalla-tipos" class="pantalla activa">
+    <div id="aviso-datos" class="aviso-datos oculto"></div>
     <div class="hero-fecha" id="hero-fecha"></div>
     <div class="acceso-rapido">
       <button class="aq aq-hoy" onclick="irA('pantalla-hoy')"><span class="aq-ico">🕘</span><b>Horarios de hoy</b><small>El horario de cada línea</small></button>
-      <button class="aq aq-directo" onclick="irA('pantalla-buses')"><span class="aq-ico">📡🚍🛰️</span><b>Buses en directo</b><small>Mapa y lineales</small></button>
+      <button class="aq aq-directo" onclick="irA('pantalla-buses')"><span class="aq-ico">🚍</span><b>Buses en directo</b><small>Mapa y lineales</small></button>
       <button class="aq aq-paradas" id="btn-misparadas" onclick="togglePanelParadas()"><i class="aq-chev">▾</i><span class="aq-ico">⭐</span><b>Mis paradas</b><small id="mp-count"></small></button>
     </div>
     <div id="panel-misparadas" class="panel-paradas oculto"></div>
@@ -48,7 +49,7 @@
     <div class="lista-info">
       <button onclick="mostrarLineas('manual')"><span>📖</span>Manuales y normativa</button>
       <button onclick="irA('pantalla-archivos')"><span>📁</span>Archivos</button>
-      <button onclick="irA('pantalla-gtfs')"><span>🛰️</span>Horarios públicos (GTFS)</button>
+      <button onclick="irA('pantalla-gtfs')"><span>📅</span>Horarios públicos (GTFS)</button>
     </div>
   </section>
 
@@ -80,12 +81,13 @@
   <!-- NUEVA PANTALLA PARA EL MANUAL -->
   <section id="pantalla-manual" class="pantalla">
     <div class="man-cab"><h2 id="titulo-manual">Manuales y normativa</h2><button class="btn-edit" onclick="manualEditar()">✏️ Editar</button></div>
+    <div class="man-tools"><input id="man-q" type="search" placeholder="Buscar en el manual"><button id="man-open">Abrir todo</button><button id="man-close">Cerrar todo</button></div>
     <div id="lista-manual" class="lista-manual"></div>
     <div id="contenido-manual" class="md"></div>
     <div id="manual-editor" class="oculto">
       <h3 class="sec-tit">Editor</h3>
       <div class="me-barra" id="me-barra">
-        <button data-a="h1">Título</button><button data-a="h2">Subtítulo</button><button data-a="h3">Apartado</button>
+        <button data-a="h1">Título</button><button data-a="h2">Subtítulo</button><button data-a="h3">Apartado</button><button data-a="h4">Nivel 4</button>
         <button data-a="b"><b>N</b></button><button data-a="i"><i>C</i></button><button data-a="u"><u>S</u></button><button data-a="mark">Resaltar</button>
         <button data-a="c-rojo" class="col rojo">A</button><button data-a="c-azul" class="col azul">A</button><button data-a="c-verde" class="col verde">A</button><button data-a="c-naranja" class="col naranja">A</button><button data-a="c-morado" class="col morado">A</button><button data-a="c-gris" class="col gris">A</button><button data-a="f-amarillo">Fondo</button>
         <button data-a="ul">• Lista</button><button data-a="ol">1. Lista</button><button data-a="nota">Aviso</button><button data-a="hr">Raya</button><button data-a="tabla">Tabla</button>
@@ -121,14 +123,14 @@
 
   <section id="pantalla-buses" class="pantalla">
     <div class="gx bx">
-      <h2>📡🚍🛰️ Buses en directo</h2>
+      <h2>🚍 Buses en directo</h2>
       <div id="bx-app"></div>
     </div>
   </section>
 
   <section id="pantalla-gtfs" class="pantalla">
     <div class="gx">
-      <h2>🛰️ Horarios públicos (GTFS)</h2>
+      <h2>📅 Horarios públicos (GTFS)</h2>
       <div class="gx-bar"><span id="meta">Sin datos cargados</span><label class="btn">Cargar GTFS (.zip)<input id="file" type="file" hidden></label><button id="rtb" class="ghost">Ver buses en directo →</button></div>
       <main id="gx-app" class="gx-main"></main>
     </div>
@@ -157,7 +159,7 @@
 
 <nav id="navbar">
   <button data-go="pantalla-tipos" class="activo"><span>🏠</span>Inicio</button>
-  <button data-go="pantalla-buses"><span>📡🚍🛰️</span>En directo</button>
+  <button data-go="pantalla-buses"><span>🚍</span>En directo</button>
   <button data-go="pantalla-hoy"><span>🕘</span>Hoy</button>
   <button data-go="mis-paradas"><span>⭐</span>Mis paradas</button>
   <button data-go="pantalla-favoritos"><span>📌</span>Turnos</button>
