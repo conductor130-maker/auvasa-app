@@ -2,10 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#005AA0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Horarios AUVASA</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -22,9 +25,9 @@
   <div class="cabecera-top">
     <button id="btn-atras" class="btn-atras oculto" onclick="volverAtras()" aria-label="Atrás">‹</button><h1><img src="icon-192.png" class="logo" alt=""><span>AUVASA</span></h1>
     <div class="acciones">
-      <button id="btnBuscar" title="Buscar">🔍</button>
-      <button id="btnOscuro" title="Modo oscuro">🌓</button>
-      <button id="btnFavoritos" title="Mis turnos">⭐</button>
+      <button id="btnBuscar" title="Buscar" aria-label="Buscar">🔍</button>
+      <button id="btnOscuro" title="Modo oscuro" aria-label="Modo oscuro">🌓</button>
+      <button id="btnFavoritos" title="Mis turnos" aria-label="Mis turnos">⭐</button>
     </div>
   </div>
   <div id="barraBusqueda" class="barra-busqueda oculto">
@@ -50,6 +53,7 @@
       <button onclick="mostrarLineas('manual')"><span>📖</span>Manuales y normativa</button>
       <button onclick="irA('pantalla-archivos')"><span>📁</span>Archivos</button>
       <button onclick="irA('pantalla-gtfs')"><span>📅</span>Horarios públicos (GTFS)</button>
+      <button onclick="irA('pantalla-pdfs')"><span>📎</span>Documentos PDF</button>
     </div>
   </section>
 
@@ -121,6 +125,12 @@
     <div id="arch-mis"></div>
   </section>
 
+  <!-- NUEVA PANTALLA: DOCUMENTOS PDF -->
+  <section id="pantalla-pdfs" class="pantalla">
+    <h2>📎 Documentos</h2>
+    <div class="lista-pdfs" id="lista-pdfs"></div>
+  </section>
+
   <section id="pantalla-buses" class="pantalla">
     <div class="gx bx">
       <h2>🚍 Buses en directo</h2>
@@ -155,6 +165,12 @@
       <button class="btn-primario" onclick="guardarFavorito()">Guardar</button>
     </div>
   </div>
+</div>
+
+<!-- AVISO DE NUEVA VERSIÓN -->
+<div id="banner-update" class="banner-update oculto">
+  <span>Hay una versión nueva de la app</span>
+  <button id="btn-actualizar">Actualizar</button>
 </div>
 
 <nav id="navbar">

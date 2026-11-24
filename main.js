@@ -33,7 +33,7 @@ async function cargarArchivo(archivo) {
 
 async function cargarDatos() {
   const grid = document.getElementById('grid-tipos');
-  grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:20px;">Cargando horarios...</p>';
+  grid.innerHTML = Array.from({ length: 8 }).map(function () { return '<div class="skeleton-tipo"></div>'; }).join('');
   const archivos = [
     'horarios_ordinarias.json', 'horarios_madrugada.json', 'horarios_lanzaderas.json', 'horarios_buho.json',
     'horarios_futbol.json', 'horarios_personal.json', 'horarios_especiales.json', 'horarios_manual.json'
@@ -85,6 +85,7 @@ function irA(id, pushHistory = true) {
   if (id === 'pantalla-buses' && window.bxInit) window.bxInit();
   if (id === 'pantalla-hoy' && window.hoyInit) window.hoyInit();
   if (id === 'pantalla-archivos' && window.archInit) window.archInit();
+  if (id === 'pantalla-pdfs' && window.pdfsInit) window.pdfsInit();
   if (window.navActivo) window.navActivo(id);
   
   const btnAtras = document.getElementById('btn-atras');
@@ -527,5 +528,30 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('btnFavoritos').addEventListener('click', function() { renderFavoritos(); irA('pantalla-favoritos'); });
   
   cargarDatos();
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function (reg) {
+      reg.addEventListener('updatefound', function () {
+        const nuevo = reg.installing;
+        if (!nuevo) return;
+        nuevo.addEventListener('statechange', function () {
+          if (nuevo.state === 'installed' && navigator.serviceWorker.controller) {
+            const b = document.getElementById('banner-update');
+            if (b) b.classList.remove('oculto');
+          }
+        });
+      });
+    });
+    let refrescando = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (refrescando) return;
+      refrescando = true;
+      window.location.reload();
+    });
+    const btnAct = document.getElementById('btn-actualizar');
+    if (btnAct) btnAct.addEventListener('click', function () {
+      navigator.serviceWorker.getRegistration().then(function (reg) {
+        if (reg && reg.waiting) reg.waiting.postMessage('SKIP_WAITING');
+      });
+    });
+  }
 });

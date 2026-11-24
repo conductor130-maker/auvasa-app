@@ -53,9 +53,10 @@ window.togglePanelParadas = function () {
 
 /* ============ Horarios de hoy ============ */
 const dtf = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Madrid', weekday: 'short', month: 'numeric' });
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 function todayInfo() {
   const p = {}; dtf.formatToParts(new Date()).forEach(x => { p[x.type] = x.value; });
-  return { wd: p.weekday, month: +p.month, text: new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date()) };
+  return { wd: p.weekday, month: +p.month, text: cap(new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(new Date())) };
 }
 // GTFS service ids look like L1A11_L1A3: line 1, group A, 11 coches (→ «11 coches A» in the book), shift 3
 const parseSvc = svc => { const m = /^L([A-Z]\d*|\d+)([A-Z])(\d+)([A-Z]?)_/.exec(svc); return m ? { line: m[1], letter: m[2], n: +m[3] } : null; };
@@ -146,6 +147,20 @@ function renderArch() {
   renderMis();
 }
 window.archInit = renderArch;
+
+/* ============ Documentos PDF (accesos directos) ============ */
+const PDFS = [
+  ['libro_horarios.pdf', 'Libro de horarios', '📘']
+  // añade aquí más líneas igual que esta, una por documento:
+  // ['otro_archivo.pdf', 'Nombre que se ve en el botón', '📄'],
+];
+function renderPdfs() {
+  const el = $('#lista-pdfs'); if (!el) return;
+  el.innerHTML = PDFS.length ? PDFS.map(([f, l, ic]) =>
+    `<a class="btn-manual" href="${esc(f)}" target="_blank" rel="noopener"><span style="font-size:1.3rem;margin-right:10px;">${ic || '📄'}</span>${esc(l)}</a>`
+  ).join('') : '<p class="mu">No hay documentos configurados todavía.</p>';
+}
+window.pdfsInit = renderPdfs;
 
 /* ============ Manuales y normativa: texto con formato ============ */
 function inline(s) {

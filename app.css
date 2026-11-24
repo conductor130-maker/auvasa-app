@@ -12,7 +12,7 @@ body.dark { --sombra2: 0 4px 14px rgba(0, 0, 0, .45); }
 .pantalla h2 { margin-bottom: 14px; }
 
 /* Inicio */
-.hero-fecha { font-size: .9rem; color: var(--texto-secundario); text-transform: capitalize; margin: 0 4px 12px; }
+.hero-fecha { font-size: .9rem; color: var(--texto-secundario); margin: 0 4px 12px; }
 .sec-tit { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--texto-secundario); margin: 24px 4px 10px; font-weight: 700; }
 .acceso-rapido { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .aq { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-height: 100px; padding: 12px; border: 0; border-top: 4px solid var(--ac, #005AA0); border-radius: var(--rad); background: var(--tarjeta); color: var(--texto); box-shadow: var(--sombra2); font-family: inherit; text-align: left; cursor: pointer; }
@@ -41,7 +41,7 @@ body.dark { --sombra2: 0 4px 14px rgba(0, 0, 0, .45); }
 .mp-arr .bx-arr { margin: 0; }
 
 /* Horarios de hoy */
-.hoy-fecha { color: var(--texto-secundario); text-transform: capitalize; margin: -6px 2px 14px; }
+.hoy-fecha { color: var(--texto-secundario); margin: -6px 2px 14px; }
 .hoy-linea { display: flex; gap: 12px; align-items: flex-start; background: var(--tarjeta); border-radius: 14px; padding: 12px; margin-bottom: 8px; box-shadow: var(--sombra); }
 .hoy-num { flex: 0 0 52px; text-align: center; font-weight: 700; font-size: 1.3rem; color: #fff; background: var(--azul); border-radius: 10px; padding: 8px 0; }
 .hoy-det { flex: 1; min-width: 0; }
@@ -142,3 +142,15 @@ body.dark .md-n3 > summary { color: #4CD964; }
 .tipo-especial { background: linear-gradient(135deg, #d35400, #a04000); }
 .aviso-datos { background: #fdecea; color: #7a1c14; border: 1px solid #f0a8a0; border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; font-size: .88rem; line-height: 1.5; }
 .aviso-datos button { margin-top: 8px; padding: 8px 14px; border: 0; border-radius: 8px; background: #c0392b; color: #fff; font-family: inherit; font-weight: 600; cursor: pointer; }
+
+/* Esqueleto de carga */
+.skeleton-tipo { min-height: 96px; border-radius: var(--rad); background: linear-gradient(90deg, var(--borde) 25%, var(--fondo) 50%, var(--borde) 75%); background-size: 200% 100%; animation: sk 1.2s ease-in-out infinite; }
+@keyframes sk { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* Aviso de nueva versión */
+.banner-update { position: fixed; left: 12px; right: 12px; bottom: calc(84px + env(safe-area-inset-bottom)); background: var(--azul-oscuro); color: #fff; padding: 12px 14px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; gap: 10px; z-index: 500; box-shadow: 0 4px 14px rgba(0,0,0,.3); font-size: .92rem; }
+.banner-update button { background: #fff; color: var(--azul); border: 0; border-radius: 8px; padding: 8px 12px; font-weight: 700; cursor: pointer; font-family: inherit; flex: 0 0 auto; }
+
+/* Documentos PDF */
+.lista-pdfs { display: flex; flex-direction: column; gap: 10px; }
+.lista-pdfs a.btn-manual { display: flex; align-items: center; text-decoration: none; }
